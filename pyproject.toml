@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "orm-tutorial"
+version = "0.1.0"
+description = ""
+authors = ["pai-jk <dlwnsrb05@publicai.co.kr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.29"}
+asyncpg = "^0.29.0"
+pytest = "^8.2.0"
+pytest-asyncio = "^0.23.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+asyncio_mode = "auto"
+log_cli = true
+log_cli_level = "DEBUG"
